@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/other/other",
+    "pages/content/content",
+    "pages/weather/weather",
+    "pages/kdselect/kdselect",
+    "pages/wxarticle/wxarticle"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "历史上的今天",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "img/index_p.png",
+        "iconPath": "img/index_n.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/more_p.png",
+        "iconPath": "img/more_n.png",
+        "pagePath": "pages/other/other",
+        "text": "更多"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+<!--index.wxml-->
+ <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="3500">
+    <block wx:for="{{msgList}}" wx:key="1*this">
+        <swiper-item>
+          <view class="swiper_item">{{item.title}}</view>
+        </swiper-item>
+    </block>
+  </swiper> 
+<view class="view_top">
+  <picker class='data' mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <!-- <image src='../../img/calendar.png'></image> -->
+      <view class="zan-panel">
+    <view class="zan-btn zan-btn--large">
+            <ul>
+                <li style='width:45%;'><image src="../../img/calendar.png"></image> </li>
+                <li style="width:55%;"> {{showtext}}</li>
+            </ul>    
+    </view>
+  </view>
+  </picker>
+</view>
+
+
+<!--列表  -->
+   <scroll-view  scroll-y="true" class="scoll-h" >   
+    <block wx:for="{{datas}}" wx:key="2*this">
+       <view class="items-list" bindtap="showDetail" data-index="{{index}}">
+          <view class="zan-cell">  
+          <view class="zan-cell__bd">{{item.year}}</view>
+            <view class="zan-pull-right zan-ellipsis">{{item.title}}</view>
+          </view>
+
+       </view>                  
+    </block>
+  </scroll-view> 
+  
+
+
+                 

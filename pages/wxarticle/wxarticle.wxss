@@ -1,0 +1,72 @@
+/* pages/wxarticle/wxarticle.wxss */
+.container{
+  height: 100%;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  word-break:break-all;
+  padding: 0;
+}
+.news{
+  width: 100%;
+  /* border-bottom: 1px #e6e6e6 solid; */
+  padding:10px 0;
+}
+.news_left{
+  padding-top:10rpx;
+  width:63%;
+  height: 95%;
+  float: left;
+}
+.news_title{
+  line-height: 50rpx;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.news_left_down{
+  margin-bottom: 26rpx;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  color: #888;
+  font-size: 10px;
+}
+.postername{
+  padding: 0 20rpx 0 0;
+  float: left;
+}
+.comment{
+  margin-left: 6rpx;
+}
+.com_number{
+  padding: 0 4rpx;
+  float: left;
+}
+.comment image{
+  margin-top: 13rpx;
+  width: 14px;
+  height: 13.5px;
+}
+.news_right{
+  vertical-align: middle;
+  float: right;
+  width: 30%;
+  height: 150rpx;
+}
+.news_right image{
+  vertical-align: middle;
+  height: 150rpx;
+  width: 100%;
+  padding: 0;
+  border-radius: 1.7px;
+}
+.bottom{
+  width: 100%;
+  height: 340rpx;
+  line-height: 340rpx;
+  font-size: 15px;
+  text-align: center;
+  color: #888;
+}

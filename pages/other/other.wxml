@@ -1,0 +1,38 @@
+<!--pages/other/other.wxml-->
+
+  <view class="personal-top">
+    <view class="personal-top-image">
+      <image src="{{userinfor.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="personal-top-text">{{userinfor.nickName}}</view>
+  </view>
+  <view class="personal-middle">
+    <view class="per-mid-list1" bindtap='bindViewWeather'>
+      <view class="per-mid-list1-left per-mid-list-left">
+        <image src="../../img/weather.png"/>
+        <view class="per-mid-list1-left-text per-mid-list-left-text">天气预报</view>
+      </view>
+      <view class="per-mid-list1-right per-mid-list-right">
+        <image src="../../img/jiantou.png"/>
+      </view>
+    </view>
+    <view class="per-mid-list2"bindtap='bindViewkdcx'>
+      <view class="per-mid-list2-left per-mid-list-left">
+        <image src="../../img/express.png"/>
+        <view class="per-mid-list2-left-text per-mid-list-left-text">快递查询</view>
+      </view>
+      <view class="per-mid-list2-right per-mid-list-right">
+        <image src="../../img/jiantou.png"/>
+      </view>
+    </view>
+
+        <view class="per-mid-list3"bindtap='bindViewwxwz'>
+      <view class="per-mid-list3-left per-mid-list-left">
+        <image src="../../img/weixinarticle.png"/>
+        <view class="per-mid-list3-left-text per-mid-list-left-text">微信文章</view>
+      </view>
+      <view class="per-mid-list3-right per-mid-list-right">
+        <image src="../../img/jiantou.png"/>
+      </view>
+    </view>
+  </view>

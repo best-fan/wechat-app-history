@@ -1,0 +1,17 @@
+<!--pages/kdselect/kdselect.wxml-->
+<import src="../../dist/steps/index.wxml" />
+<view class="container">
+  <input placeholder="请输入一个快递单号"  bindinput="input" />
+  <button type="primary" bindtap="btnClick"> 查询 </button>
+  <view hidden="{{reply}}">
+    <view class="zan-panel-title">{{expressInfo.type}}：{{expressInfo.number}}</view>
+    <view class="zan-panel-title">物流状态:{{status}}</view>
+    <view class="zan-panel">
+      <view class="zan-cell zan-cell">
+        <view class="zan-cell__bd">
+          <template is="zan-steps" data="{{ type: 'vertical', hasDesc: true, steps }}"></template>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

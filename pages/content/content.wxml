@@ -1,0 +1,59 @@
+<!--pages/content/content.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
+<import src="/dist/toptips/index.wxml" />
+<view class="wxParse conent_view">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<!--回复  -->
+  <!-- <view class="talk" bindtap="bindReply">回复</view> -->
+<view class='aaaa' style="margin-bottom: 52px;">
+  <view class="top_view zan-c-red zan-font-14">用户评论:</view>
+  <block wx:if="{{num>0}}">
+      <block wx:for="{{plresult}}" wx:key="2*this">
+        <view class="items-list" data-index="{{index}}">
+          <view class='comment_all'>
+            <view class='comment'> 
+              <view class='comment_left'>
+                <image src="{{item.imgsrc}}" mode="aspectFill"/>
+              </view>
+              <view class='comment_right'>
+                <view class='comment_right_up'>
+                  <ul>
+                    <li style="width:18%;color:blue;">{{item.nickname}}</li>
+                    <li style="width:30%;">{{item.side}}</li>
+                    <li style="width: 50%;text-align: right;float: right;">{{item.createdAt}}</li>
+                  </ul>
+                </view>
+                <view class='comment_right_down'>{{item.content}}</view>
+              </view>
+            </view>
+          </view>
+        </view>                  
+      </block>
+  </block>
+  <block wx:else>
+    <view class='zwpl_view'>暂无评论</view>
+  </block>
+</view>
+<!--评论详情  -->
+
+
+
+
+  <button class='zan-btn zan-btn--large zan-btn--primary view_btn' bindtap="bindReply">我要评论</button>
+<view class="release" hidden="{{!releaseFocus}}">
+<textarea class="text"
+bindinput='getplnr'
+placeholder-class="input_null"
+fixed="true"
+maxlength="-1"
+show-confirm-bar="false"
+cursor-spacing="15"
+auto-height="true"
+focus="{{releaseFocus}}"
+ value="{{pl}}"
+></textarea>
+<view class="submit"  bindtap="bindsubmit">发送</view>
+</view>
+
+<template is="zan-toptips" data="{{ zanTopTips }}"></template>

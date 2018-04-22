@@ -1,0 +1,22 @@
+<!--pages/wxarticle/wxarticle.wxml-->
+<view class="container">
+  <block wx:for="{{list}}" wx:key="1*this">
+    <view id="transport" class='news' bindtap='bindViewNewsList' data-index="{{index}}">
+      <view class='news_left'>
+        <view class='news_title'>{{item.title}}</view>
+        <view class='news_left_down'>
+          <view class='postername'>{{item.weixinname}}</view>
+          <view class='comment'>
+            <view class='com_number'>{{item.time}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='news_right'>
+        <image src='{{item.pic}}'/>
+      </view>
+    </view>
+  </block>
+ 
+</view>
+
+

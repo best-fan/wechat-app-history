@@ -1,0 +1,122 @@
+/* pages/content/content.wxss */
+@import "/wxParse/wxParse.wxss";
+/*内容  */
+.conent_view{
+  margin-left:17px;
+margin-right:17px;
+margin-top:10px;
+
+}
+.zwpl_view{
+  text-align:center;
+margin-top:20px;
+margin-bottom:20px;
+color:#737373;
+
+}
+/*用户评论  */
+.top_view{
+  margin-left: 17px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+/*评论定义  */
+.comment_all{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  border-bottom:1px #999 dashed; 
+}
+.comment{
+  width:100%;
+  height: 84px;
+}
+.comment_left{
+  width: 64px;
+  height: 84px;
+  float: left;
+}
+.comment_left image{
+  height: 50px;
+  width: 50px;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+}
+.comment_right{
+  width: 80%;
+  height: 84px;
+  float: right;
+}
+.comment_right_up{
+  height: 32px;
+  width: 100%;
+}
+.comment_right_up ul{
+  height: 32px;
+  width: 100%;
+}
+.comment_right_up ul li{
+  color: #888;
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  float: left;
+}
+.comment_right_down{
+  word-break:break-all;
+  font-size: 14px;
+  height: 52px;
+  width: 100%;
+}
+
+
+
+/*输入框定义  */
+.input_null{
+color: #C9C9C9;
+}
+ 
+.release{
+display: flex;
+align-items: flex-end; /*底部对齐*/
+justify-content: space-between; /*两端对齐*/
+box-sizing: border-box;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+padding: 18rpx 0 18rpx 30rpx;
+background-color: #F7F8F7;
+font-size: 28rpx;
+z-index: 999;
+height:51px;
+}
+.release .text{
+width: 604rpx;
+min-height: 34rpx;
+max-height: 102rpx; /*最多显示三行*/
+border-width: 15rpx 20rpx; /*使用padding与预期留白不一致，故使用border*/
+border-style: solid;
+border-color: #ffffff;
+line-height: 34rpx;
+font-size: 28rpx;
+background-color: #ffffff;
+border-radius: 4rpx;
+}
+.release .submit{
+width: 116rpx;
+height: 64rpx;
+line-height: 64rpx;
+text-align: center;
+color: #66CC00;
+}
+/*我要评论  */
+.view_btn{
+  /* margin-top: 9px; */
+width:100%; 
+position:fixed;
+bottom:0px;
+}

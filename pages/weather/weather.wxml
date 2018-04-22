@@ -1,0 +1,59 @@
+<!--pages/weather/weather.wxml-->
+<!--index.wxml-->
+<view>
+  <view class="top_city">
+    <view class="city_list">
+
+      <view class="city_item city_item_center">
+        {{weatherinfor.city}}
+      </view>
+
+    </view>
+  </view>
+
+
+
+  <view class="container" style="background: #42c642;height: 250px;">
+    <view class="today">
+      <view class="temperature">
+        <text>{{weatherinfor.temp}}°</text>
+      </view>
+
+      <view class="desc">
+        <text>{{weatherinfor.weather}} {{weatherinfor.winddirect}} {{weatherinfor.windpower}}</text>
+      </view>
+
+      <view class="more">
+        <text>湿度 : {{weatherinfor.humidity}}</text>
+        <text>PM2.5 : {{weatherinfor.aqi.pm2_5}}</text>
+        <text>{{weatherinfor.aqi.quality}}</text>
+      </view>
+    </view>
+  </view>
+  <!--小时天气  -->
+
+  <scroll-view class='hourly' scroll-x="true">
+    <block wx:for="{{weatherinfor.hourly}}" wx:key='this'>
+    <view class='oneHourly'>
+      <view class='oneHourlyFlex'>
+        <view class='hourlyDate'>{{item.time}}</view>
+        <image class='hourlyImg' src='../../img/weather/{{item.img}}.png' mode='aspectFit'></image>
+        <view class='hourlyTmp'>{{item.temp}}°C</view>
+        <view class='hourlyWind'>
+          <text>{{item.weather}}</text>
+        </view>
+      </view>
+    </view>
+      </block>
+  </scroll-view>
+    <block wx:for="{{weatherinfor.daily}}" wx:key='this'>
+    <view class='dailyForecast'>
+    <view class='daily' style="flex-direction:row;">
+      <view class='dailyDate'>{{item.week}}</view>
+      <image class='dailyImg' src='../../img/weather/{{item.day.img}}.png' mode='aspectFit'></image>
+      <view class='dailyCond'>{{item.day.weather}}</view>
+      <view class='dailyTmp'>{{item.night.templow}}°~{{item.day.temphigh}}°</view>
+    </view>
+  </view>
+  </block>
+</view>
